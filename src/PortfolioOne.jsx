@@ -1,6 +1,11 @@
 
 import { useState, useEffect } from "react"
-import yuviiImage from "./yuviimage.jpg";
+import yuviiImage from "../src/img/yuviimage.jpg";
+import notesheetImage from "../src/img/notesheetImage.png";
+import conferenceImage from "../src/img/conferenceMainImage.png";
+import AWSCloudArchitectingImage from "../src/img/AWSCloudArchitecting.png";
+import AWSCloudFoundationsImage from "../src/img/AWSCloudFoundations.png";
+
 
 import {
   Mail,
@@ -39,8 +44,8 @@ export default function PortfolioOne() {
     location: "Indore [M.P.], India",
     email: "yuvrajsingh1008jat@gmail.com",
     phone: "+91 9685851293",
-    website: "",
-    resumeUrl: "",
+    website: "https://portfolio-coral-theta-26.vercel.app/",
+    resumeUrl: yuviiImage,
     avatar: "",
 
     // Availability
@@ -48,14 +53,14 @@ export default function PortfolioOne() {
     availabilityText: "Available for freelance projects",
 
     // Bio
-    bio: "Passionate full-stack developer with experience of building scalable web applications. I love turning complex problems into simple, beautiful solutions. When I'm not coding, you'll find me exploring new technologies or contributing to open source projects.",
+    bio: "Passionate full-stack web developer with experience of building scalable web applications. I love turning complex problems into simple, beautiful solutions. When I'm not coding, you'll find me exploring new technologies or contributing to open source projects.",
 
     // Social Links
     social: {
       github: "https://github.com/YuvrajSinghJat",
-      linkedin: "http://www.linkedin.com/in/yuvraj-singh-jat-371b872aa",
+      linkedin: "http://www.linkedin.com/in/yuvrajsinghjat",
       twitter: "https://twitter.com/",
-      website: "",
+      website: "https://portfolio-coral-theta-26.vercel.app/",
     },
 
     // Experience Stats
@@ -72,22 +77,22 @@ export default function PortfolioOne() {
       id: 1,
       title: "Notesheet Managment System",
       description:
-        "A modern, scalable e-commerce solution built with Next.js and Stripe integration. Features include real-time inventory, advanced search, and mobile-responsive design.",
-      image: "",
-      technologies: ["HTML", "JavaScript", "CSS", "MySql", "Node jsL","Express js"],
+        "Engineered a full-stack System using HTML, CSS, JS, Node.js, Express, and SQL with secure, role-based access.  Designed and optimized a relational SQL schema with 6+ tables to streamline notesheet workflows and approvals. Deployed the app on university server, enabling real-time access, user auth, and multi-level file approval.",
+      image: notesheetImage,
+      technologies: ["HTML", "JavaScript", "CSS", "MySQL", "Node js","Express js"],
       liveUrl: "http://note.medicaps.ac.in:5000",
       githubUrl: "https://github.com/YuvrajSinghJat/Notesheet.git",
       featured: true,
-      category: "Full Satck",
+      category: "Full Stack",
     },
     {
       id: 2,
       title: "Conference Website",
       description:
-        "A collaborative task management application with real-time updates, team collaboration features, and advanced project tracking capabilities.",
-      image: "",
+        "Developed a responsive conference website using React (CRA) and JavaScript, showcasing event schedules, speakers, and registration info.Implemented dynamic routing, reusable components, and interactive UI for seamless user experience. Deployed the site on AWS, ensuring fast, accessible, and mobile-friendly performance.",
+      image: conferenceImage,
       technologies: ["React js", "JavaScript", "Tailwind CSS", "Bootstarp", "Create React App"],
-      liveUrl: "",
+      liveUrl: "https://conference.medicaps.ac.in/",
       githubUrl: "https://github.com/YuvrajSinghJat/ConferenceMedicaps.git",
       featured: true,
       category: "Frontend",
@@ -95,62 +100,94 @@ export default function PortfolioOne() {
 
   ]
 
+  const internships = [
+    {
+      id: 1,
+      institute: "MII Foundation",
+      title : "Software Development Engineer Intern And Project Manager Intern",
+      description1 : "Architected and contributed to scalable codebases as an SDE intern, driving development across frontend and backend using modern web stacks.",
+      description2 : "Led a cross-functional team of developers and designers to deliver project milestones on time, coordinating sprint planning, task allocation, and regular stand-ups.",
+      description3 : "Facilitated effective collaboration between stakeholders and team members, improving communication flow and ensuring alignment with project goals and timelines.",
+      technologies: ["HTML","CSS","EJS", "React js","JavaScript","Node js", "Express js","MongoDB"],
+    },
+    {
+      id: 1,
+      institute: "IQPaths",
+      title : "Full Stack Web Developer Intern",
+      description1 : "Developed advanced backend logic and APIs to support dynamic, data-driven features, improving application performance and scalability.",
+      description2 : "Contributed across the full stack using modern tools and frameworks, collaborating effectively with the team through Jira, GitHub.",
+      description3 : "Enhanced backend architecture by integrating modular logic and ensuring clean, maintainable code",
+      technologies: ["React js", "JavaScript", "Tailwind CSS", "Node js", "Express js","MongoDB"],
+    },
+
+  ]
+
+    const certifications = [
+    {
+      id: 1,
+      title: "AWS Cloud Architecting",
+      image: AWSCloudArchitectingImage,
+      url: "https://www.credly.com/go/ztpio35x",
+    },
+    {
+      id: 2,
+      title: " AWS Cloud Foundations",
+      image: AWSCloudFoundationsImage,
+      url: "https://www.credly.com/go/bKVpVdw1",
+    },
+
+  ]
+
+
+
   const skills = {
     frontend: [
-      { name: "JavaScript", level: 95, icon: "🟨" },
-      { name: "React js", level: 95, icon: "⚛️" },
-      { name: "HTML", level: 95, icon: "⚛️" },
-      { name: "CSS", level: 95, icon: "⚛️" },
-      { name: "Tailwind CSS", level: 92, icon: "🎨" },
+      { name: "JavaScript", icon: "🟨" },
+      { name: "React js", icon: "⚛️" },
+      { name: "HTML", icon: "⚛️" },
+      { name: "CSS", icon: "⚛️" },
+      { name: "Tailwind CSS", icon: "🎨" },
       
     ],
     backend: [
-      { name: "Node.js", level: 90, icon: "🟢" },
-      { name: "Express.js", level: 88, icon: "🚀" },
-      { name: "REST APIs", level: 92, icon: "🌐" },
+      { name: "Node.js", icon: "🟢" },
+      { name: "Express.js", icon: "🚀" },
+      { name: "REST APIs", icon: "🌐" },
     ],
     database: [
-      { name: "MongoDB", level: 85, icon: "🍃" },
-      { name: "MYSQL", level: 82, icon: "🚀" },
+      { name: "MongoDB", icon: "🍃" },
+      { name: "MySQL", icon: "🚀" },
     ],
     tools: [
-      { name: "Git", level: 95, icon: "📝" },
-      { name: "Docker", level: 85, icon: "🐳" },
-      { name: "Kubernatics", level: 80, icon: "☁️" },
-      { name: "AWS", level: 80, icon: "☁️" },
-      { name: "VS Code", level: 98, icon: "💙" },
+      { name: "Git", icon: "📝" },
+      { name: "Docker", icon: "🐳" },
+      { name: "Kubernetes", icon: "☁️" },
+      { name: "AWS", licon: "☁️" },
+      { name: "VS Code", icon: "💙" },
     ],
     programminglanguages : [
-      { name: "C/C++", level: 95, icon: "📝" },
-      { name: "JavaScript", level: 85, icon: "🐳" },
-      { name: "Java", level: 80, icon: "☁️" },
-      { name: "Python", level: 80, icon: "☁️" },
+      { name: "C/C++", icon: "📝" },
+      { name: "JavaScript", icon: "🐳" },
+      { name: "Java", icon: "☁️" },
+      { name: "Python", icon: "☁️" },
     ],
   }
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Product Manager at TechCorp",
+      name: "Prof. Sanket Gupta",
+      role: "Professor & Academic Head 3rd Year CSE, Medicaps University",
       content:
-        "Alex delivered exceptional work on our e-commerce platform. His attention to detail and technical expertise exceeded our expectations.",
-      avatar: "👩‍💼",
-      rating: 5,
-    },
-    {
-      name: "Mike Chen",
-      role: "Startup Founder",
-      content:
-        "Working with Alex was a game-changer for our startup. He built our MVP in record time without compromising on quality.",
+        "",
       avatar: "👨‍💻",
       rating: 5,
     },
     {
-      name: "Emily Davis",
-      role: "Design Director",
+      name: "Prof. Shivani Patnah",
+      role: "Professor, Medicaps University",
       content:
-        "Alex has an incredible ability to bring designs to life. His code is clean, efficient, and perfectly matches our design vision.",
-      avatar: "👩‍🎨",
+        "",
+      avatar: "👩‍💼",
       rating: 5,
     },
   ]
@@ -210,23 +247,23 @@ export default function PortfolioOne() {
           >
             {/* Avatar */}
             <div className="relative mb-8">
-              <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-gradient-to-r from-orange-500 to-red-500 p-1 bg-gradient-to-r from-orange-500 to-red-500">
+              <div className="w-58 h-58 mx-auto rounded-full overflow-hidden border-4 border-gradient-to-r from-orange-500 to-red-500 p-1 bg-gradient-to-r from-orange-500 to-red-500">
                 <img
                    src={yuviiImage}
                   alt={userData.name}
-                  className="w-full h-full object-cover rounded-full bg-neutral-800"
+                  className="rounded-full bg-neutral-800"
                 />
               </div>
 
               {/* Availability Badge */}
-              {userData.availableForHire && (
+              {/* {userData.availableForHire && (
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                   <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-2 shadow-lg">
                     <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    {/* <span>{userData.availabilityText}</span> */}
+                    <span>{userData.availabilityText}</span>
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
 
             {/* Name & Title */}
@@ -318,11 +355,11 @@ export default function PortfolioOne() {
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center space-x-2 bg-neutral-900/50 px-4 py-2 rounded-lg">
                     <Heart className="w-5 h-5 text-red-400" />
-                    <span className="text-neutral-300">Bakend Expert</span>
+                    <span className="text-neutral-300">Backend Expert</span>
                   </div>
                   <div className="flex items-center space-x-2 bg-neutral-900/50 px-4 py-2 rounded-lg">
                     <Heart className="w-5 h-5 text-orange-400" />
-                    <span className="text-neutral-300">System Design</span>
+                    <span className="text-neutral-300">Data Structures and Algorithms</span>
                   </div>
                   <div className="flex items-center space-x-2 bg-neutral-900/50 px-4 py-2 rounded-lg">
                     <Zap className="w-5 h-5 text-yellow-400" />
@@ -384,9 +421,9 @@ export default function PortfolioOne() {
                       available: <span className="text-orange-400">{userData.availableForHire.toString()}</span>,
                     </div>
                     <div className="text-neutral-400 ml-4">
-                      skills: [<span className="text-green-400">'React'</span>,{" "}
-                      <span className="text-green-400">'Node.js'</span>,{" "}
-                      <span className="text-green-400">'TypeScript'</span>],
+                      skills: [<span className="text-green-400">'Node js'</span>,{" "}
+                      <span className="text-green-400">'Express js'</span>,{" "}
+                      <span className="text-green-400">'JavaScript'</span>],
                     </div>
                     <div className="text-neutral-400 ml-4">
                       passion: <span className="text-green-400">'Building amazing things'</span>
@@ -450,12 +487,12 @@ export default function PortfolioOne() {
                       <span className="text-2xl">{skill.icon}</span>
                       <span className="text-white font-semibold">{skill.name}</span>
                     </div>
-                    <span className="text-orange-400 font-bold">{skill.level}%</span>
+                    {/* <span className="text-orange-400 font-bold">{skill.level}%</span> */}
                   </div>
                   <div className="w-full bg-neutral-800 rounded-full h-2">
                     <div
                       className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: "30%"}}
+                      style={{ width: "100%"}}
                     ></div>
                   </div>
                 </div>
@@ -553,6 +590,152 @@ export default function PortfolioOne() {
           </div>
         </section>
 
+
+
+        {/* Experience*/}
+        <section className="py-20">
+          <div
+            className={
+              "transition-all duration-1000 delay-700 " +
+              (isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")
+            }
+          >
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                My{" "}
+                <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                  Experiences
+                </span>
+              </h2>
+              <p className="text-xl text-neutral-300 max-w-2xl mx-auto">
+                A showcase of my recent internships and work
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-1 gap-8">
+              {internships.map((internship, index) => (
+                <div
+                  key={internship.id}
+                  className="group bg-neutral-900/50 border border-neutral-800 rounded-2xl overflow-hidden hover:border-orange-500/50 transition-all duration-300 hover:scale-105"
+                >
+                  <div className="relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        {internship.institute}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold text-white mb-3">{internship.institute}</h3>
+                    <p className="text-neutral-300 mb-4 leading-relaxed font-bold">{internship.title}</p>
+                    <p className="text-neutral-300 mb-4 leading-relaxed"># {internship.description1}</p>
+                    <p className="text-neutral-300 mb-4 leading-relaxed"># {internship.description2}</p>
+                    <p className="text-neutral-300 mb-4 leading-relaxed"># {internship.description3}</p>
+
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {internship.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="bg-neutral-800 text-neutral-300 px-3 py-1 rounded-full text-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* <div className="flex space-x-4">
+                      <a
+                        href={project.liveUrl}
+                        className="flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                      >
+                        <Eye className="w-4 h-4" />
+                        <span>Live Demo</span>
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                      <a
+                        href={project.githubUrl}
+                        className="flex items-center space-x-2 border border-neutral-600 hover:border-orange-500 text-neutral-300 hover:text-orange-400 px-4 py-2 rounded-lg font-semibold transition-all duration-300"
+                      >
+                        <Github className="w-4 h-4" />
+                        <span>Code</span>
+                      </a>
+                    </div> */}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <a
+                href={userData.social.github}
+                className="group inline-flex items-center space-x-2 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 hover:border-orange-500 text-neutral-300 hover:text-orange-400 px-8 py-4 rounded-xl font-semibold transition-all duration-300"
+              >
+                <span>View All Work</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+
+        {/* Certification Section */}
+        <section className="py-20">
+          <div
+            className={
+              "transition-all duration-1000 delay-700 " +
+              (isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")
+            }
+          >
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Achieved{" "}
+                <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                  Certifications
+                </span>
+              </h2>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8">
+              {certifications.map((certification, index) => (
+                <div
+                  key={certification.id}
+                  className="group bg-neutral-900/50 border border-neutral-800 rounded-2xl overflow-hidden hover:border-orange-500/50 transition-all duration-300 hover:scale-105"
+                >
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={certification.image || "/placeholder.svg"}
+                      alt={certification.title}
+                      className="w-full h-100 group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold text-white mb-3">{certification.title}</h3>
+
+                    <div className="flex space-x-4">
+                      <a
+                        href={certification.url}
+                        className="flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                      >
+                        <Eye className="w-4 h-4" />
+                        <span>View Badge</span>
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
+
+
+
         {/* Testimonials Section */}
         <section className="py-20">
           <div
@@ -577,19 +760,19 @@ export default function PortfolioOne() {
                   key={index}
                   className="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-300 hover:scale-105"
                 >
-                  <div className="flex items-center mb-4">
+                  {/* <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
-                  </div>
-                  {/* <p className="text-neutral-300 mb-6 leading-relaxed italic">"{testimonial.content}"</p>
+                  </div> */}
+                  {/* <p className="text-neutral-300 mb-6 leading-relaxed italic">"{testimonial.content}"</p> */}
                    <div className="flex items-center space-x-4">
                     <div className="text-3xl">{testimonial.avatar}</div>
                     <div>
                       <div className="text-white font-semibold">{testimonial.name}</div>
                       <div className="text-neutral-400 text-sm">{testimonial.role}</div>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
               ))}
             </div>
