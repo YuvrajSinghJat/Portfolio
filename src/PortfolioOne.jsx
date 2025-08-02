@@ -5,7 +5,7 @@ import notesheetImage from "../src/img/notesheetImage.png";
 import conferenceImage from "../src/img/conferenceMainImage.png";
 import AWSCloudArchitectingImage from "../src/img/AWSCloudArchitecting.png";
 import AWSCloudFoundationsImage from "../src/img/AWSCloudFoundations.png";
-
+import yuvrajSinghJatResume from "../src/img/Yuvraj_Singh_Jat_Resume.pdf";
 
 import {
   Mail,
@@ -45,7 +45,7 @@ export default function PortfolioOne() {
     email: "yuvrajsingh1008jat@gmail.com",
     phone: "+91 9685851293",
     website: "https://portfolio-coral-theta-26.vercel.app/",
-    resumeUrl: yuviiImage,
+    resumeUrl: yuvrajSinghJatResume,
     avatar: "",
 
     // Availability
